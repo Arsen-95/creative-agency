@@ -12,7 +12,7 @@ import {
 const App = () => {
   return (
     <>
-      <div className='font-inter bg-[url("/images/composition.png")] bg-no-repeat pb-[447px]'>
+      <div className='font-inter bg-[url("/images/composition.png")] bg-cover bg-no-repeat pb-[447px]'>
         <Header className="mb-48" />
         <Title />
       </div>
