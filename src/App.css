@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  cursor: url('/icons/cursor.svg'), pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.border-image {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #f093fb 0%, #f5576c 100%) border-box;
+  border: 2px solid transparent;
+}
+
+.input-base:focus {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #f093fb 0%, #f5576c 100%) border-box;
+  border: 2px solid transparent;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.ball1 {
+  animation: movingSm 3s ease-in-out infinite;
+}
+
+.ball2 {
+  animation: movingLg 3s ease-in-out infinite;
+}
+
+.input-base:focus + .input-label,
+.input-base:not(:placeholder-shown) + .input-label {
+  transform: translateY(-14px);
+  font-size: 10px;
+  color: #bfbfbf;
+}
+
+.input-base::placeholder {
+  user-select: none;
+}
+
+.input-base[disabled] + .input-label {
+  user-select: none;
+}
+
+.done {
+  background: url('/icons/done.svg');
+  border: none;
+}
+
+@keyframes movingSm {
+  50% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes movingLg {
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
